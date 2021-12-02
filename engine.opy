@@ -19,6 +19,7 @@ settings {
             "heroLimit": "off",
             "enableRandomHeroes": false,
             "gamemodeStartTrigger": "manual",
+	    "enableKillCam": false
         }
     },
 	"heroes": {
