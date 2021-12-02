@@ -1,5 +1,8 @@
 # overpy-visual-novel-engine
 
+engine to help create visual novels for the Overwatch Workshop using the high-level language OverPy.
+supports custom coded effects & heroes, multiple NPCs and choose-your-own-adventure choices.
+
 ## format
 
 ### storyline variable
@@ -65,6 +68,14 @@ if it is `null`, the color of the text will be white, the hero icon will be omit
 dialog sounds are not played if the player or npc dialog is `...` or begins with `(`
 
 you can add a flag to replace -42 with a workshop constant (e.g. a hero) to save elements, if needed.
+
+if the length of the choices element is 0, a game over will be shown.
+
+to add a custom hero's color, go to the rule `traverse dict` and edit the `hudHeader` function call under `npc dialog`. add a key-value pair.
+example:
+```
+Hero.JUNKRAT: rgb(1,2,3) # you can replace this with a preset color like Color.BLACK
+```
 
 ## side effects
 side effects are run as the NPC/initial prompt dialog is shown.
